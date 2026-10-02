@@ -1,26 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Weather Now</title>
-</head>
-
-<body>
-  <h1>Weather Now</h1>
-
-  <input
-    id="cityInput"
-    type="text"
-    placeholder="Enter city name"
-  />
-
-  <button id="searchButton">Get Weather</button>
-
-  <p id="message"></p>
-
-  <div id="weatherResult"></div>
-
-  <script src="js/app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A simple city weather lookup powered by Open-Meteo."
+    />
+    <title>Weather Now — Yousef Rajabi</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="./" class="brand">◌ Weather Now</a
+      ><a href="https://github.com/yousefrajabi06-debug/amazon-clone"
+        >View source ↗</a
+      >
+    </header>
+    <main>
+      <p class="eyebrow">A SMALL WINDOW TO THE WORLD</p>
+      <h1>Somewhere,<br />the sun is shining.</h1>
+      <p class="intro">Find out what the weather is doing in your city.</p>
+      <form id="weatherForm">
+        <label for="cityInput">City name</label>
+        <div class="search-row">
+          <input
+            id="cityInput"
+            type="search"
+            placeholder="Try Jerusalem, London, or Tokyo"
+            required
+            maxlength="100"
+          /><button id="searchButton" type="submit">Get weather ↗</button>
+        </div>
+      </form>
+      <p id="message" role="status" aria-live="polite"></p>
+      <section
+        id="weatherResult"
+        aria-label="Current weather"
+        aria-live="polite"
+      >
+        <div class="welcome">
+          <span>☀</span>
+          <p>A new perspective is one search away.</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>Built by Yousef Rajabi · HTML, CSS & JavaScript</span
+      ><span
+        >Weather data: <a href="https://open-meteo.com/">Open-Meteo</a> ·
+        <a href="https://creativecommons.org/licenses/by/4.0/"
+          >CC BY 4.0</a
+        ></span
+      >
+    </footer>
+    <script type="module" src="js/app.js"></script>
+  </body>
 </html>
